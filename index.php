@@ -5,9 +5,10 @@
 </head>
 <body>
 		<?php 
+			$sobre_nome2 = 'Soares';
 			$nome = "Geovane";
 			$nascimento = '10/02/1998';
-			$sobre_nome = ' Fonseca da Silva';
+			$sobre_nome = "$sobre_nome2 Fonseca da Silva";
 			/*echo $nome; 
 			echo '<br />';
 			echo $nascimento;
