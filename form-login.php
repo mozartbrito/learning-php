@@ -19,6 +19,14 @@
 						<img src="img/login.png" width="130px" class="img-fluid">
 					</div>
 					<h3 class="text-center">Área restrita</h3>
+
+					<?php if(isset($_GET['msg']) && $_GET['msg'] == 'erro') { ?>
+						<div class="alert alert-danger">
+							<p class="text-center">A senha digita está incorreta</p>
+							<!-- <a href="javascript:history.back(-1)" class="btn btn-info">Tentar novamente</a> -->
+						</div>
+					<?php } ?>
+
 					<form method="post" action="login.php">
 						<div class="form-group">
 							<label>Tema:</label>
