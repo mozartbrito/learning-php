@@ -29,14 +29,6 @@
 
 					<form method="post" action="login.php">
 						<div class="form-group">
-							<label>Tema:</label>
-							<select name="tema" class="form-control">
-								<option value="green">Verde</option>
-								<option value="yellow">Amarelo</option>
-								<option value="orange">Laranjado</option>
-							</select>
-						</div>
-						<div class="form-group">
 							<label>Login:</label>
 							<input type="text" name="login" class="form-control" placeholder="Digite seu usuário" required>
 						</div>
