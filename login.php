@@ -14,7 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
-<div class="contaner">
+<div class="container">
 	<p>&nbsp;</p>
 <!-- 	<p>&nbsp;</p> -->
 	<div class="row">

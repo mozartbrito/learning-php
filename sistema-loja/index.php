@@ -27,14 +27,14 @@
 						</div>
 					<?php } ?>
 
-					<form method="post" action="login.php">
+					<form method="post" action="principal.php">
 						<div class="form-group">
 							<label>Login:</label>
-							<input type="text" name="login" class="form-control" placeholder="Digite seu usuário" required>
+							<input type="text" name="login" class="form-control" placeholder="Digite seu usuário" >
 						</div>
 						<div class="form-group">
 							<label>Senha:</label>
-							<input type="password" name="senha" class="form-control" placeholder="Digite sua senha" required>
+							<input type="password" name="senha" class="form-control" placeholder="Digite sua senha" >
 						</div>
 						<button type="submit" class="btn btn-primary float-right">Logar</button>
 					</form>
