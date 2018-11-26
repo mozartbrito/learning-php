@@ -1,6 +1,11 @@
 <?php
 	//abaixo incluo o arquivo de conexão com o banco de dados
 	require "includes/connection.php";
+
+	$sql_categorias = "SELECT * FROM categoria;";
+	$categorias = $conexao->query($sql_categorias);
+
+
 	include "layout/header.php"; 
 	include "layout/menu.php"; 
 ?>
@@ -18,23 +23,26 @@
 		</div>
 	</div>
 	<div class="row">
+		<div class="">
+			<a href="nova-categoria.php" class="btn btn-primary">
+				Nova categoria
+			</a>
+		</div>
+		<p>&nbsp;</p>
 		<table class="table table-bordered table-striped table-hover">
 			<tr>
 				<th>ID</th>
 				<th>Descrição</th>
 			</tr>
-			<tr>
-				<td>1</td>
-				<td>Cat1</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>Cat2</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>Cat3</td>
-			</tr>
+
+			<!-- linha de loop -->
+			<?php while($categoria = $categorias->fetch_array(MYSQLI_ASSOC)) { ?>
+				<tr>
+					<td><?php echo $categoria['id']; ?></td>
+					<td><?php echo $categoria['descricao']; ?></td>
+				</tr>
+			<?php } ?>
+			<!-- fim da linha de loop -->
 		</table>
 	</div>
 </div>
