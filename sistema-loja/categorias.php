@@ -1,6 +1,6 @@
 <?php
 	//abaixo incluo o arquivo de conexão com o banco de dados
-	require "includes/connection.php"
+	require "includes/connection.php";
 	include "layout/header.php"; 
 	include "layout/menu.php"; 
 ?>
