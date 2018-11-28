@@ -33,6 +33,7 @@
 			<tr>
 				<th>ID</th>
 				<th>Descrição</th>
+				<th>Ações</th>
 			</tr>
 
 			<!-- linha de loop -->
@@ -40,6 +41,14 @@
 				<tr>
 					<td><?php echo $categoria['id']; ?></td>
 					<td><?php echo $categoria['descricao']; ?></td>
+					<td>
+						<a href="editar-categoria.php?id=<?php echo $categoria['id']; ?>" class="btn btn-warning">
+							<i class="fas fa-edit"></i>
+						</a>
+						<a href="deleta-categoria.php?id=<?php echo $categoria['id']; ?>" class="btn btn-danger" onclick="return confirm('Deseja realmente deletar?')">
+							<i class="fas fa-trash-alt"></i>
+						</a>
+					</td>
 				</tr>
 			<?php } ?>
 			<!-- fim da linha de loop -->
