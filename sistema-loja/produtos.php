@@ -16,6 +16,7 @@
 <div class="container">
 	<p>&nbsp;</p>
 	<h1>Produtos</h1>
+	
 	<div class="row">
 		<div class="col">
 			<nav aria-label="breadcrumb">
@@ -24,6 +25,11 @@
 			    <li class="breadcrumb-item active" aria-current="page">Produtos</li>
 			  </ol>
 			</nav>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<a href="novo-produto.php" class="btn btn-primary mb-2 float-right">Novo produto</a>
 		</div>
 	</div>
 	<div class="row">
@@ -37,7 +43,9 @@
 				<th>Ações</th>
 			</tr>
 
-			<?php while($produto = $produtos->fetch_array(MYSQLI_ASSOC)) { //aqui eu starto o loop dos dados da consulta ?>
+			<?php 
+			$total_estoque = 0;
+			while($produto = $produtos->fetch_array(MYSQLI_ASSOC)) { //aqui eu starto o loop dos dados da consulta ?>
 				<tr>
 					<td><?php echo $produto['id']; ?></td>
 					<td><?php echo $produto['nome']; ?></td>
@@ -47,7 +55,14 @@
 					<td></td>
 				</tr>
 
-			<?php } //aqui finalizo o loop dos dados ?>
+			<?php 
+				$total_estoque += $produto['estoque'];
+				} //aqui finalizo o loop dos dados 
+			?>
+			<tr class="table-info">
+				<td colspan="3">Total geral em estoque</td>
+				<td colspan="3"><strong><?php echo $total_estoque; ?></strong></td>
+			</tr>
 
 		</table>
 		
