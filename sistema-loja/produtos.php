@@ -17,7 +17,7 @@
 	<p>&nbsp;</p>
 	<h1>Produtos</h1>
 	<?php if(isset($_GET['msg']) && isset($_GET['tipo_msg'])) { ?>
-		<div class="alert alert-<?php echo $_GET['tipo_msg']; ?>">
+		<div class="alert alert-<?php echo $_GET['tipo_msg']; ?> esconde">
 			<?php echo $_GET['msg']; ?>
 		</div>
 	<?php } ?>
