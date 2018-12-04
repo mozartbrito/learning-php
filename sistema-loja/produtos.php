@@ -6,7 +6,7 @@
 	$sql_produtos = "SELECT p.*, c.descricao as categoria 
 					 FROM produto p
 					 LEFT JOIN  categoria c ON c.id = p.id_categoria
-					 ORDER BY p.id";
+					 ORDER BY p.id DESC";
 	//nesta linha, executo a consulta montada
 	$produtos = $conexao->query($sql_produtos);
 ?>
@@ -16,7 +16,11 @@
 <div class="container">
 	<p>&nbsp;</p>
 	<h1>Produtos</h1>
-	
+	<?php if(isset($_GET['msg']) && isset($_GET['tipo_msg'])) { ?>
+		<div class="alert alert-<?php echo $_GET['tipo_msg']; ?>">
+			<?php echo $_GET['msg']; ?>
+		</div>
+	<?php } ?>
 	<div class="row">
 		<div class="col">
 			<nav aria-label="breadcrumb">
@@ -52,7 +56,11 @@
 					<td>R$ <?php echo number_format($produto['valor'], 2, ',','.'); ?></td>
 					<td><?php echo $produto['estoque']; ?></td>
 					<td><?php echo $produto['categoria'] ?></td>
-					<td></td>
+					<td>
+						<a href="exclui-produto.php?id=<?php echo $produto['id']; ?>" class="btn btn-danger" onclick="return confirm('Deseja realmente excluir?')">
+							<i class="fas fa-trash"></i>
+						</a>
+					</td>
 				</tr>
 
 			<?php 

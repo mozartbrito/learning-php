@@ -51,7 +51,7 @@
 							<i class="fas fa-edit"></i>
 						</a>
 						<a href="deleta-categoria.php?id=<?php echo $categoria['id']; ?>" class="btn btn-danger" onclick="return confirm('Deseja realmente deletar?')">
-							<i class="fas fa-trash-alt"></i>
+							<i class="fas fa-trash"></i>
 						</a>
 					</td>
 				</tr>

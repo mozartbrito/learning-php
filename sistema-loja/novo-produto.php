@@ -35,8 +35,8 @@
 
 				<div class="col-6">
 					<div class="form-group">
-						<label for="valor">Valor:</label>
-						<input type="text" name="valor" id="valor" class="form-control" required>
+						<label for="valor">Valor (R$):</label>
+						<input type="text" name="valor" id="valor" class="form-control price" required>
 					</div>
 				</div>
 				<div class="col-6">
