@@ -4,12 +4,15 @@
 
 	require "includes/connection.php";
 
+	$title = "Novo produto";
+
 	if(isset($_GET['id']) && $_GET['id'] != '') {
 
 		$id = $_GET['id'];
 		$sql_produto = "SELECT * FROM produto WHERE id = {$id};";
 		$produto = $conexao->query($sql_produto);
 		$dados_produto = $produto->fetch_assoc();
+		$title = "Editar produto";
 	}
 
 	$sql_categorias = "SELECT * FROM categoria";
@@ -18,7 +21,7 @@
 
 <div class="container">
 	<p>&nbsp;</p>
-	<h1>Novo produto</h1>
+	<h1><?php echo $title; ?></h1>
 	
 	<div class="row">
 		<div class="col">
@@ -26,7 +29,7 @@
 			  <ol class="breadcrumb">
 			    <li class="breadcrumb-item"><a href="principal.php">Principal</a></li>
 			    <li class="breadcrumb-item"><a href="produtos.php">Produtos</a></li>
-			    <li class="breadcrumb-item active" aria-current="page">Novo produto</li>
+			    <li class="breadcrumb-item active" aria-current="page"><?php echo $title; ?></li>
 			  </ol>
 			</nav>
 		</div>

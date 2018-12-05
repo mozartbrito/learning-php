@@ -12,15 +12,16 @@ $valor = str_replace(',', '.', $valor);
 
 if($id != '') {
 	$sql_produto = "UPDATE produto SET nome = '{$nome}', valor = '{$valor}', estoque = '{$estoque}', id_categoria = '{$id_categoria}' WHERE id = {$id};";
+	$msg = "Produto alterado com sucesso!";
 } else {
 
 	$sql_produto = "INSERT INTO produto (nome, estoque, valor, id_categoria)
 						VALUES ('{$nome}', '{$estoque}', '{$valor}', '{$id_categoria}');";
+	$msg = "Produto salvo com sucesso!";
 }
 
 
 if($conexao->query($sql_produto)) {
-	$msg = "Produto salvo com sucesso!";
 	$tipo_msg = "success";
 } else {
 	$msg = "Não foi possível salvar o produto!";
