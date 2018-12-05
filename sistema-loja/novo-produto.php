@@ -39,6 +39,8 @@
 						<label for="nome">Nome:</label>
 						<input type="text" name="nome" id="nome" class="form-control" required
 						value="<?php echo (isset($dados_produto) ? $dados_produto['nome'] : ''); ?>">
+
+						<input type="hidden" name="id" value="<?php echo (isset($dados_produto) ? $dados_produto['id'] : ''); ?>">
 					</div>
 				</div>
 
