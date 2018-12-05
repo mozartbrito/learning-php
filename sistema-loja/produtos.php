@@ -57,6 +57,9 @@
 					<td><?php echo $produto['estoque']; ?></td>
 					<td><?php echo $produto['categoria'] ?></td>
 					<td>
+						<a href="novo-produto.php?id=<?php echo $produto['id']; ?>" class="btn btn-warning">
+							<i class="fas fa-edit"></i>
+						</a>
 						<a href="exclui-produto.php?id=<?php echo $produto['id']; ?>" class="btn btn-danger" onclick="return confirm('Deseja realmente excluir?')">
 							<i class="fas fa-trash"></i>
 						</a>

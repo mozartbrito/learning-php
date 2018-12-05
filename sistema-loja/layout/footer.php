@@ -25,7 +25,7 @@
 
 	setTimeout(function() {
 		$(".esconde").fadeOut(2500);
-	}, 4000);
+	}, 2500);
 </script>
 </body>
 </html>
