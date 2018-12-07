@@ -43,11 +43,13 @@ if(isset($_GET['id']) && $_GET['id'] != '') {
 				</div>
 				<div class="form-group">
 					<label for="email">E-mail:</label>
-					<input type="email" name="email" id="email" class="form-control" required  value="<?php echo(isset($dados_usuario) ? $dados_usuario['email'] : ''); ?>">
+					<input type="email" name="email" id="email" class="form-control" required  
+					value="<?php echo(isset($dados_usuario) ? $dados_usuario['email'] : ''); ?>">
 				</div>
 				<div class="form-group">
 					<label for="senha">Senha:</label>
-					<input type="password" name="senha" id="senha" class="form-control" >
+					<input type="password" name="senha" id="senha" class="form-control"
+					 <?php echo(isset($dados_usuario) ? '' : 'required') ?> >
 				</div>
 				<button class="btn btn-primary float-right" type="submit">Salvar</button>
 			</form>

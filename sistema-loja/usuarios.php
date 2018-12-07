@@ -47,7 +47,7 @@ $usuarios = $conexao->query($sql_usarios);
 						<td><?php echo $usuario['nome']; ?></td>
 						<td><?php echo $usuario['email'] ?></td>
 						<td>
-							<a href="editar-usuario.php?id=<?php echo $usuario['id']; ?>" class="btn btn-warning">
+							<a href="novo-usuario.php?id=<?php echo $usuario['id']; ?>" class="btn btn-warning">
 								<i class="fas fa-edit"></i>
 							</a>
 
