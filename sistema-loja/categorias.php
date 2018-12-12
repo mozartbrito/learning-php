@@ -1,5 +1,5 @@
 <?php
-	//abaixo incluo o arquivo de conexão com o banco de dados
+//abaixo incluo o arquivo de conexão com o banco de dados
 	require "includes/connection.php";
 
 	$sql_categorias = "SELECT * FROM categoria;";

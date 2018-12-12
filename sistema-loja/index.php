@@ -19,7 +19,11 @@
 						<img src="img/login.png" width="130px" class="img-fluid">
 					</div>
 					<h3 class="text-center">Área restrita</h3>
-
+					<?php if(isset($_GET['msg']) && isset($_GET['tipo_msg'])) { ?>
+						<div class="alert alert-<?php echo $_GET['tipo_msg']; ?> esconde">
+							<?php echo $_GET['msg']; ?>
+						</div>
+					<?php } ?>
 					<?php if(isset($_GET['msg']) && $_GET['msg'] == 'erro') { ?>
 						<div class="alert alert-danger">
 							<p class="text-center">A senha digita está incorreta</p>
@@ -27,10 +31,10 @@
 						</div>
 					<?php } ?>
 
-					<form method="post" action="principal.php">
+					<form method="post" action="login.php">
 						<div class="form-group">
 							<label>Login:</label>
-							<input type="text" name="login" class="form-control" placeholder="Digite seu usuário" >
+							<input type="email" name="login" class="form-control" placeholder="Digite seu usuário" autofocus>
 						</div>
 						<div class="form-group">
 							<label>Senha:</label>

@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION['nome'])) {
+	header("Location: index.php?msg=Sessão expirada&tipo_msg=warning");
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>

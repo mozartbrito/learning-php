@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 	//$mysqli = new mysqli("localhost", "usuario", "senha", "database");
 	//nesta linha realizo a conexão
 	require "includes/connection.php";
