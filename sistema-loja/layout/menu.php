@@ -35,7 +35,7 @@
       <strong><?php echo $_SESSION['nome']; ?></strong>
       &nbsp;
       &nbsp;
-      <a href="logout.php">
+      <a href="logout.php" class="btn btn-warning">
         <i class="fas fa-sign-out-alt"></i>
       </a>
     </p>
